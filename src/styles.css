@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:'San Francisco', Helvetica, Arial, san-serif;
+    height: 100vh;
+    /* background-image: url('your-background-image.jpg'); */
+    background-size: cover;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 550px;
+    background: rgba(255, 255, 255, 0.3); 
+    padding:30px;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(13px) brightness(105%);
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 1;
+  }
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(13px) brightness(105%); 
+    text-align: center;
+    font-size: 15px;
+    border-radius: 9px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+.content-container {
+    max-height: 80vh; 
+    overflow-y: auto;
+  }
+  
+@media (max-width: 767px) {
+    .container {
+        max-width: 100%; 
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        max-width: 80%; 
+    }
+}
+
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 550px; 
+    }
+}
+
+
+
+
+
+
