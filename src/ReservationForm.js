@@ -48,7 +48,7 @@ const ReservationForm = () => {
       // Check the 'result' property in the response
       if (data.result === 'success') {
        
-        history.push('/thankyou');
+        history.push('/reserve/thankyou');
       } else {
         alert('Submission failed. Please try again.');
       }
