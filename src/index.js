@@ -1,34 +1,20 @@
+// index.js
+
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-import ReservationForm from './ReservationForm';
+import ReactDOM from 'react-dom';
+import App from './App';
+import './index.css'; // Import your global styles if you have any
+// import Navbar from './Navbar';
+// import Footer from './Footer';
 
-const App = () => {
-  return (
-    <div>
-      {/* ... (your navigation bar) */}
-      <nav>
-        <a className="navbar-brand" href="https://trimexcolleges.edu.ph/">
-          <img src="https://drive.google.com/uc?id=1AZ-d0WyBy-8C0zbqAyw_DhoCtN3pXZCD" width="195" height="45" alt="trimexcolleges" />
-        </a>
-      </nav>
 
-      <ReservationForm />
-      {/* ... (your footer) */}
-      <div class="footer" id="page-footer">
-        <p>&copy; 2023 Reservenow. All rights reserved.</p>
-      </div>
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
+    
+    {/* <Navbar/> */}
     <App />
-  </React.StrictMode>
+    {/* <Footer /> */}
+
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-
-reportWebVitals();

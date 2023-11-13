@@ -21,6 +21,7 @@ body {
 
 }
 
+
 nav {
     position: fixed;
     top: 0;
@@ -69,9 +70,3 @@ nav {
         max-width: 550px; 
     }
 }
-
-
-
-
-
-
