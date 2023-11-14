@@ -7,7 +7,7 @@ import ThankYouPage from './ThankYou'; // Create ThankYouPage component
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/reserve">
       <Switch>
         <Route exact path="/" component={ReservationForm} />
         <Route path="/thankyou" component={ThankYouPage} />
