@@ -1,7 +1,7 @@
 // ThankYou.js
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './styles.css';
+
 
 const ThankYou = () => {
   return (

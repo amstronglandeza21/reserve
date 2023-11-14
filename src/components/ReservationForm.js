@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import './styles.css';
+import Navbar from '../Navbar';
+import Footer from '../Footer';
+
 
 // Import necessary React modules
 

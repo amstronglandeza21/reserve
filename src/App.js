@@ -1,9 +1,10 @@
 // App.js
 
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import ReservationForm from './ReservationForm';
-import ThankYouPage from './ThankYou'; // Create ThankYouPage component
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import ReservationForm from './components/ReservationForm';
+import ThankYouPage from './components/ThankYou'; // Create ThankYouPage component
+import './styles.css';
 
 const App = () => {
   return (
