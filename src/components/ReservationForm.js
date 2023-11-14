@@ -47,7 +47,7 @@ const ReservationForm = () => {
 
       // Check the 'result' property in the response
       if (data.result === 'success') {
-       
+        // window.location.href = '/reserve-success'
         history.push('/thankyou');
       } else {
         alert('Submission failed. Please try again.');
