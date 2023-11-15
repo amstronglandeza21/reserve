@@ -48,7 +48,7 @@ const ReservationForm = () => {
       // Check the 'result' property in the response
       if (data.result === 'success') {
         
-        window.location.href = '/reserve-success'
+        window.location.href = '/thankyou'
         // history.push(process.env.PUBLIC_URL + '/thankyou');
         // history.push('/thankyou');
       } else {
@@ -174,7 +174,7 @@ const ReservationForm = () => {
 
           </div>
           <div className="col-md-12 text-end">
-          <button className="btn btn-danger " type="submit">Submitt</button>
+          <button className="btn btn-danger " type="submit">Submittt</button>
           </div>
         </form>
 
