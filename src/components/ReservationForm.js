@@ -22,7 +22,7 @@ const ReservationForm = () => {
 
   // State variable for the course dropdown options
   const [courseOptions, setCourseOptions] = useState([]);
-  const history = useHistory();
+  // const history = useHistory();
 
   // Function to handle form input changes
   const handleInputChange = (e) => {
