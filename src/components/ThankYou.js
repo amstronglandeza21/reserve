@@ -7,7 +7,7 @@ const ThankYou = () => {
   return (
     <div>
       <h1>Thank You!</h1>
-      <p>Your form has been submitted successfully.</p>
+      <p>Your form has been submitted successfullly.</p>
     </div>
   );
 };
