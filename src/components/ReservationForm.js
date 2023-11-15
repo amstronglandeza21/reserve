@@ -22,7 +22,7 @@ const ReservationForm = () => {
 
   // State variable for the course dropdown options
   const [courseOptions, setCourseOptions] = useState([]);
-  // const history = useHistory();
+  const history = useHistory();
 
   // Function to handle form input changes
   const handleInputChange = (e) => {
@@ -48,9 +48,9 @@ const ReservationForm = () => {
       // Check the 'result' property in the response
       if (data.result === 'success') {
         
-        window.location.href = '/thankyou'
+        // window.location.href = '/thankyou'
         // history.push(process.env.PUBLIC_URL + '/thankyou');
-        // history.push('/thankyou');
+        history.push('/thankyou');
       } else {
         alert('Submission failed. Please try again.');
       }
