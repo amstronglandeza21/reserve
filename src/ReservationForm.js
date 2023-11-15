@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from '../Navbar';
-import Footer from '../Footer';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 
 // Import necessary React modules
@@ -174,7 +174,7 @@ const ReservationForm = () => {
 
           </div>
           <div className="col-md-12 text-end">
-          <button className="btn btn-danger " type="submit">Submit</button>
+          <button className="btn btn-danger " type="submitt">Submit</button>
           </div>
         </form>
 
