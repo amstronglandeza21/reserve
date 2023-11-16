@@ -7,7 +7,7 @@ import './styles.css';
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/reserve">
       <Switch>
         <Route exact path="/" component={ReservationForm} />
         <Route path="/thankyou" component={ThankYou} />
