@@ -174,7 +174,7 @@ const ReservationForm = () => {
 
           </div>
           <div className="col-md-12 text-end">
-          <button className="btn btn-danger " type="submitt">Submitt</button>
+          <button className="btn btn-danger " type="submit">Submit</button>
           </div>
         </form>
 

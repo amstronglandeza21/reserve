@@ -63,6 +63,7 @@ nav {
   width: 100%;
   z-index: 1;
 }
+
 .content-container {
   max-height: 80vh; /* Adjust the value as needed to control the maximum height of the scrollable area. */
   overflow-y: auto;
