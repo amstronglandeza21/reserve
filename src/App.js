@@ -9,7 +9,8 @@ const App = () => {
   return (
     <Router basename="/reserve">
       <Switch>
-        <Route exact path="/" component={ReservationForm} />
+        {/* <Route exact path="/" exact component={} /> */}
+        <Route path="/" exact component={ReservationForm} />
         <Route path="/thankyou" component={ThankYou} />
       </Switch>
     </Router>
