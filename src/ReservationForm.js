@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom'; // Import useHistory from react-r
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ReactLoading from 'react-loading';
+
 
 
 // Import necessary React modules
@@ -32,7 +34,9 @@ const ReservationForm = () => {
   // Function to handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
+    setLoading(true);  // Show loading animation
+  
     try {
       // Fetch data from Google Apps Script endpoint
       const response = await fetch('https://script.google.com/macros/s/AKfycbzCna4DAZb7lMUvwfEwubHnC4UwoRc5qDf0kbx046KTFvZte6d7ogqsdsxao-4HQ-6O/exec', {
@@ -42,19 +46,19 @@ const ReservationForm = () => {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
       });
-
+  
       const data = await response.json();
-
+  
       // Check the 'result' property in the response
       if (data.result === 'success') {
-        
-        // window.location.href = '/thankyou'
-        // history.push(process.env.PUBLIC_URL + '/thankyou');
+        setLoading(false);  // Hide loading animation
         history.push('/thankyou');
       } else {
+        setLoading(false);  // Hide loading animation
         alert('Submission failed. Please try again.');
       }
     } catch (error) {
+      setLoading(false);  // Hide loading animation
       console.error('Error:', error.message);
     }
   };
@@ -75,116 +79,106 @@ const ReservationForm = () => {
   }, []);
 
   return (
-
     <div>
-    {/* Navbar */}
-  
-    <Navbar/>
-      {/* Navbar content */}
-  
+      <Navbar/>
+      <div className="container" id="content-container">
+        {loading ? (
+          <ReactLoading type={'spin'} color={'#000'} height={'20%'} width={'20%'} />
+        ) : (
+          <form className="row g-3" onSubmit={handleSubmit}>
+            <div className="col-md-6">
+              <label htmlFor="Firstname" className="form-label">First Name*</label>
+              <input
+                id="Firstname"
+                className="form-control"
+                type="text"
+                name="FIRSTNAME"
+                placeholder="Enter First Name"
+                value={formData.FIRSTNAME}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-    <div className="container" id="content-container">
+            <div className="col-md-6">
+              <label htmlFor="Lastname" className="form-label text-start">Last Name*</label>
+              <input
+                id="Lastname"
+                className="form-control"
+                type="text"
+                name="LASTNAME"
+                placeholder="Enter Last Name"
+                value={formData.LASTNAME}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-        <form className="row g-3" onSubmit={handleSubmit}>
-          <div className="col-md-6">
-            <label htmlFor="Firstname" className="form-label">First Name*</label>
-            <input
-              id="Firstname"
-              className="form-control"
-              type="text"
-              name="FIRSTNAME"
-              placeholder="Enter First Name"
-              value={formData.FIRSTNAME}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
+            <div className="col-md-6">
+              <label htmlFor="contactno" className="form-label">Contact Number*</label>
+              <input
+                id="contactno"
+                className="form-control"
+                type="tel"
+                name="CONTACTNO"
+                placeholder="Enter Contact Number"
+                value={formData.CONTACTNO}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-          <div className="col-md-6">
-            <label htmlFor="Lastname" className="form-label text-start">Last Name*</label>
-            <input
-              id="Lastname"
-              className="form-control"
-              type="text"
-              name="LASTNAME"
-              placeholder="Enter Last Name"
-              value={formData.LASTNAME}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
+            <div className="col-md-6">
+              <label htmlFor="birthday" className="form-label">Birthday*</label>
+              <input
+                id="birthday"
+                className="form-control"
+                type="date"
+                name="BIRTHDAY"
+                value={formData.BIRTHDAY}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-          <div className="col-md-6">
-            <label htmlFor="contactno" className="form-label">Contact Number*</label>
-            <input
-              id="contactno"
-              className="form-control"
-              type="tel"
-              name="CONTACTNO"
-              placeholder="Enter Contact Number"
-              value={formData.CONTACTNO}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
+            <div className="col-md-6">
+              <label htmlFor="email" className="form-label">Email*</label>
+              <input
+                id="email"
+                className="form-control"
+                type="email"
+                name="EMAIL"
+                placeholder="Enter Email"
+                value={formData.EMAIL}
+                onChange={handleInputChange}
+                required
+              />
+            </div>
 
-          <div className="col-md-6">
-            <label htmlFor="Birthday" className="form-label">Birthday*</label>
-            <input
-              id="Birthday"
-              className="form-control"
-              type="date"
-              name="BIRTHDAY"
-              value={formData.BIRTHDAY}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
+            <div className="col-md-6">
+              <label htmlFor="course" className="form-label">Course*</label>
+              <select
+                id="course"
+                className="form-select"
+                name="COURSE"
+                value={formData.COURSE}
+                onChange={handleInputChange}
+                required
+              >
+                <option selected>Choose...</option>
+                {courseOptions.map((option, index) => (
+                  <option key={index} value={option.value}>{option.text}</option>
+                ))}
+              </select>
+            </div>
 
-          <div className="col-md-12">
-            <label htmlFor="Email" className="form-label">Email*</label>
-            <input
-              id="Email"
-              className="form-control"
-              type="email"
-              autoComplete="on"
-              name="EMAIL"
-              placeholder="Enter Email"
-              value={formData.EMAIL}
-              onChange={handleInputChange}
-              required
-            />
-          </div>
-
-          <div className="col-md-12">
-            <label htmlFor="courseDropdown" className="form-label">Course*</label>
-            <select
-              className="form-select"
-              name="COURSE"
-              id="courseDropdown"
-              value={formData.COURSE}
-              onChange={handleInputChange}
-              required
-            >
-              <option disabled selected value="">Select a Course</option>
-              {courseOptions.map((course, index) => (
-                <option key={index} value={course.value}>{course.text}</option>
-              ))}
-            </select>
-
-          </div>
-          <div className="col-md-12 text-end">
-          <button className="btn btn-danger " type="submit">Submit</button>
-          </div>
-        </form>
-
-    </div>
-   {/* Footer */}
-   <div className="footer">
-        {/* Footer content */}
-        <Footer/>
-
+            <div className="col-12">
+              <button className="btn btn-primary" type="submit">Submit</button>
+            </div>
+          </form>
+        )}
       </div>
+      <Footer/>
     </div>
   );
 };
