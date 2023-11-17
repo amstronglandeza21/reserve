@@ -82,10 +82,11 @@ const ReservationForm = () => {
   return (
     <div>
       <Navbar/>
-      <div className="container" id="content-container">
-        {loading ? (
-          <ReactLoading type={'spin'} color={'#000'} height={'20%'} width={'20%'} />
+      {loading ? (
+          <ReactLoading type="spin" color="#007bff" height={50} width={50} />
         ) : (
+      <div className="container" id="content-container">
+        
           <form className="row g-3" onSubmit={handleSubmit}>
             <div className="col-md-6">
               <label htmlFor="Firstname" className="form-label">First Name*</label>
@@ -156,7 +157,7 @@ const ReservationForm = () => {
               />
             </div>
 
-            <div className="col-md-6">
+            <div className="col-md-2">
               <label htmlFor="course" className="form-label">Course*</label>
               <select
                 id="course"
@@ -174,11 +175,13 @@ const ReservationForm = () => {
             </div>
 
             <div className="col-12">
-              <button className="btn btn-primary" type="submit">Submit</button>
+              <button className="btn btn-danger" type="submit">Submit</button>
             </div>
           </form>
-        )}
+        
       </div>
+      )}
+
       <Footer/>
     </div>
   );
