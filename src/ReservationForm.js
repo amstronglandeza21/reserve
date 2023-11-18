@@ -83,7 +83,7 @@ const ReservationForm = () => {
     <div>
     
       {loading ? (
-          <ReactLoading  id="loading-spinner" type="spinner" color="#ad2323" height={50} width={50} />
+          <ReactLoading  type="spin" color="#ad2323" height={50} width={50} />
         ) : (
       <div className="container" id="content-container">
         
@@ -175,7 +175,7 @@ const ReservationForm = () => {
             </div>
 
             <div className="col-12">
-              <button className="btn btn-danger" type="submit">Submit</button>
+              <button className="btn btn-danger text-end" type="submit">Submit</button>
             </div>
           </form>
         
