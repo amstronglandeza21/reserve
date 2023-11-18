@@ -81,7 +81,7 @@ const ReservationForm = () => {
 
   return (
     <div>
-      <Navbar/>
+    
       {loading ? (
           <ReactLoading type="spin" color="#007bff" height={50} width={50} />
         ) : (
@@ -182,7 +182,7 @@ const ReservationForm = () => {
       </div>
       )}
 
-      <Footer/>
+     
     </div>
   );
 };
