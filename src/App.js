@@ -9,12 +9,18 @@ import './styles.css';
 const App = () => {
   return (
     <Router>
+
+<Navbar/>
+
       <Switch>
-      <Navbar/>
+      
         <Route path="/" exact component={ReservationForm} />
         <Route path="/thankyou" component={ThankYou} />
-        <Footer/>
+        
       </Switch>
+      
+<Footer/>
+
     </Router>
   );
 };
