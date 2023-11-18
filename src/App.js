@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import ReservationForm from './ReservationForm';
 import ThankYou from './ThankYou'; 
+import Navbar from './Navbar';
+import Footer from './Footer';
 import './styles.css';
 
 const App = () => {
