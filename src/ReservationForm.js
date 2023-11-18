@@ -83,7 +83,7 @@ const ReservationForm = () => {
     <div>
     
       {loading ? (
-          <ReactLoading type="spin" color="#007bff" height={50} width={50} />
+          <ReactLoading  id="loading-spinner" type="spinner" color="#ad2323" height={50} width={50} />
         ) : (
       <div className="container" id="content-container">
         
@@ -157,7 +157,7 @@ const ReservationForm = () => {
               />
             </div>
 
-            <div className="col-md-4">
+            <div className="col-md-6">
               <label htmlFor="course" className="form-label">Course*</label>
               <select
                 id="course"

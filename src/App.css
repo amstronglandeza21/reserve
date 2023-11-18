@@ -74,7 +74,7 @@ nav {
   height: 4rem;
   width: 4rem;
   border: 4px solid #ead3d3;
-  border-top-color: #c90a0a;
+  border-top-color: rgb(173, 35, 35);
   border-radius: 50%;
   animation: spinner 800ms linear infinite;
 }
