@@ -157,7 +157,7 @@ const ReservationForm = () => {
               />
             </div>
 
-            <div className="col-md-2">
+            <div className="col-md-4">
               <label htmlFor="course" className="form-label">Course*</label>
               <select
                 id="course"
