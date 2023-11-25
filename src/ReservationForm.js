@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom'; // Import useHistory from react-router-dom
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import Navbar from './Navbar';
-// import Footer from './Footer';
 import ReactLoading from 'react-loading';
 
 
@@ -159,19 +157,23 @@ const ReservationForm = () => {
 
             <div className="col-md-6">
               <label htmlFor="course" className="form-label">Course*</label>
-              <select
-                id="course"
-                className="form-select"
-                name="COURSE"
-                value={formData.COURSE}
-                onChange={handleInputChange}
-                required
-              >
-                <option selected>Choose...</option>
-                {courseOptions.map((option, index) => (
-                  <option key={index} value={option.value}>{option.text}</option>
-                ))}
-              </select>
+            
+                <select
+                      id="course"
+                      className="form-select"
+                      name="COURSE"
+                      value={formData.COURSE}
+                      onChange={handleInputChange}
+                      required
+                    >
+                      <option value="" disabled>Select a Course...</option>
+                      {courseOptions.map((option, index) => (
+                        <option key={index} value={option.value}>{option.text}</option>
+                      ))}
+                </select>
+
+
+
             </div>
 
             <div className="col-12">
