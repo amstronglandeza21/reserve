@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.54eae0ce.css",
-    "main.js": "/static/js/main.90b76065.js",
-    "index.html": "/index.html",
-    "main.54eae0ce.css.map": "/static/css/main.54eae0ce.css.map",
-    "main.90b76065.js.map": "/static/js/main.90b76065.js.map"
+    "main.css": "/reservenow.online/static/css/main.54eae0ce.css",
+    "main.js": "/reservenow.online/static/js/main.90b76065.js",
+    "index.html": "/reservenow.online/index.html",
+    "main.54eae0ce.css.map": "/reservenow.online/static/css/main.54eae0ce.css.map",
+    "main.90b76065.js.map": "/reservenow.online/static/js/main.90b76065.js.map"
   },
   "entrypoints": [
     "static/css/main.54eae0ce.css",
