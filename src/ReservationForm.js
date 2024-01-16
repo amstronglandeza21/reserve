@@ -39,7 +39,7 @@ const ReservationForm = () => {
   
     try {
       // Fetch data from Google Apps Script endpoint
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzlaRUD0DyVc5IB0q3sKu10orIn7XUFzUbM2-lTBghpqCdZ6VLddeotnm9dJBCiJe1l6g/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzCna4DAZb7lMUvwfEwubHnC4UwoRc5qDf0kbx046KTFvZte6d7ogqsdsxao-4HQ-6O/exec', {
         method: 'POST',
         body: new URLSearchParams(formData),
         headers: {
